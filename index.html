@@ -1,84 +1,90 @@
-<!-- VERSÃO PREMIUM-FOCADA - SUPER LANDING PAGE COM FOCO EM PRODUTOS PAGOS + FREEMIUM DE APOIO -->
+<!-- SUPER LANDING PAGE - VERSÃO PREMIUM + FREEMIUM COM VISUAL VIBRANTE E INTEGRAÇÃO ATIVA -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jornada de Crescimento - Produtos Premium que Transformam</title>
-  <meta name="description" content="Descubra produtos premium que aceleram sua transformação pessoal, com acesso gratuito ao eBook introdutório.">
-  <meta name="keywords" content="produtos premium, transformação pessoal, ebook gratuito, curso emocional, diario guiado">
+  <meta name="description" content="Descubra produtos premium que aceleram sua transformação pessoal e receba gratuitamente nosso eBook introdutório.">
+  <meta name="keywords" content="ebook, diário emocional, transformação pessoal, desafio, curso online, autoconhecimento">
+  <title>Desperte Sua Nova Versão</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <style>
     :root {
-      --primary: #004D40;
-      --accent: #FF6F00;
-      --text: #222;
-      --bg: #F1F8E9;
-      --font: 'Helvetica Neue', sans-serif;
+      --primary: #FF5722;
+      --accent: #00BCD4;
+      --text: #1a1a1a;
+      --bg: #FFF8F1;
+      --font: 'Segoe UI', sans-serif;
     }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0; padding: 0;
       font-family: var(--font);
       background: var(--bg);
       color: var(--text);
+      line-height: 1.6;
     }
-
     header {
-      background: linear-gradient(135deg, var(--primary), #00695C);
+      background: linear-gradient(135deg, var(--primary), #E64A19);
       color: white;
-      padding: 80px 20px;
       text-align: center;
+      padding: 80px 20px;
     }
-    header h1 { font-size: 2.8rem; margin-bottom: 16px; }
-    header p { font-size: 1.2rem; max-width: 720px; margin: 0 auto; }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-    .highlight-product {
+    .premium-section {
       max-width: 1000px;
       margin: 60px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      padding: 40px 20px;
     }
-    .highlight-product h2 {
-      font-size: 2rem;
+    .premium-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
       color: var(--primary);
-      margin-bottom: 24px;
     }
     .premium-list {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
     }
     .premium-item {
-      background: #fff7e0;
+      background: #FFF3E0;
+      border-left: 5px solid var(--primary);
       padding: 24px;
       border-radius: 12px;
-      border-left: 8px solid var(--accent);
     }
     .premium-item h3 {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-      color: var(--accent);
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
     .premium-item p {
-      font-size: 1rem;
       margin-bottom: 16px;
     }
     .premium-item a {
-      display: inline-block;
       background: var(--accent);
       color: white;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
 
     .freemium-cta {
-      background: #E8F5E9;
-      padding: 60px 20px;
+      background: var(--accent);
+      color: white;
       text-align: center;
+      padding: 60px 20px;
     }
     .freemium-cta h2 {
       font-size: 2rem;
@@ -108,16 +114,20 @@
     }
     .loader {
       display: none;
-      margin: 0 auto;
-      width: 32px;
-      height: 32px;
-      border: 4px solid #ccc;
-      border-top-color: var(--accent);
+      margin: 12px auto;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid white;
       border-radius: 50%;
+      width: 36px;
+      height: 36px;
       animation: spin 1s linear infinite;
     }
     @keyframes spin {
       to { transform: rotate(360deg); }
+    }
+    #resposta {
+      font-weight: bold;
+      margin-top: 16px;
     }
 
     footer {
@@ -130,46 +140,92 @@
 </head>
 <body>
   <header>
-    <h1>Desperte seu Potencial</h1>
-    <p>Explore nossos produtos premium para evoluir com intencionalidade e receba gratuitamente o eBook "Primeiros Passos da Transformação".</p>
+    <h1>Desperte Sua Nova Versão</h1>
+    <p>Conheça nossos produtos transformadores e comece sua jornada com um presente gratuito.</p>
   </header>
 
-  <section class="highlight-product">
+  <section class="premium-section">
     <h2>✨ Produtos Premium em Destaque</h2>
     <div class="premium-list">
       <div class="premium-item">
         <h3>📓 Diário de Autocura</h3>
-        <p>Um diário digital com prompts e reflexões guiadas para reconectar-se com sua jornada interior.</p>
-        <a href="#">Quero esse Diário</a>
+        <p>Um diário digital com reflexões e exercícios de reconexão interior.</p>
+        <a href="#">Adquirir Agora</a>
       </div>
       <div class="premium-item">
         <h3>🎯 Desafio 30 Dias de Recomeço</h3>
-        <p>Transforme sua rotina com um plano prático e estruturado de 30 dias, com ações diárias e apoio emocional.</p>
-        <a href="#">Participar do Desafio</a>
+        <p>Plano prático com 30 dias de ação e clareza emocional para recomeçar com leveza.</p>
+        <a href="#">Começar o Desafio</a>
       </div>
       <div class="premium-item">
         <h3>🧠 Masterclass de Propósito</h3>
-        <p>Um curso em vídeo poderoso para clarear seus valores, superar bloqueios e ativar seu plano de vida.</p>
-        <a href="#">Assistir Masterclass</a>
+        <p>Vídeo aula exclusiva sobre clareza, espiritualidade prática e ativação do propósito.</p>
+        <a href="#">Assistir Agora</a>
       </div>
     </div>
   </section>
 
   <section class="freemium-cta">
-    <h2>📘 Acesse o eBook Gratuito</h2>
-    <p>Receba agora o nosso material introdutório e comece sua jornada com base sólida.</p>
+    <h2>📘 Baixe o eBook Gratuito</h2>
+    <p>Preencha seus dados abaixo e receba um conteúdo transformador direto no seu e-mail.</p>
     <form id="leadForm">
       <input type="text" name="nome" placeholder="Seu nome" required>
       <input type="email" name="email" placeholder="Seu e-mail" required>
-      <button type="submit">Receber eBook</button>
+      <input type="tel" name="telefone" placeholder="Seu telefone" required pattern="[0-9]{10,15}">
+      <button type="submit">Quero Receber</button>
       <div class="loader" id="loader"></div>
     </form>
-    <p id="resposta" style="margin-top: 20px; font-weight: bold;"></p>
+    <p id="resposta"></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Transforme Premium. Todos os direitos reservados.</p>
-    <p>Siga no Instagram, TikTok e Facebook para mais conteúdo transformador.</p>
+    <p>&copy; 2025 Sua Nova Versão. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- FORM SCRIPT -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxkz2YeXPU3dAHWTFKAVKaibQBxb7CG57DRxCCT9Mg_xNWdE2Zsgn_LVsYCv-yZyqDF5g/exec';
+    const SECRET = 'minha_senha_supersecreta';
+
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const submitButton = form.querySelector('button[type="submit"]');
+      const formData = new FormData(form);
+      const loader = document.getElementById('loader');
+      const resposta = document.getElementById('resposta');
+
+      resposta.textContent = '';
+      loader.style.display = 'block';
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+
+      const timestamp = Date.now().toString();
+      const token = CryptoJS.SHA256(SECRET + timestamp).toString();
+      formData.append('timestamp', timestamp);
+      formData.append('token', token);
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.text())
+      .then(data => {
+        loader.style.display = 'none';
+        resposta.innerHTML = `✅ Enviado com sucesso! <br><a href='https://drive.google.com/file/d/1ygDIaCv7npsuSea6U1RzBXUBF3l831cA/view?usp=drive_link' target='_blank'>Clique aqui para baixar o eBook</a>`;
+        form.reset();
+          submitButton.disabled = false;
+          submitButton.textContent = 'Quero Receber';
+      })
+      .catch(err => {
+        loader.style.display = 'none';
+        resposta.textContent = '❌ Erro ao enviar. Tente novamente mais tarde.';
+        console.error("Erro:", err);
+          submitButton.disabled = false;
+          submitButton.textContent = 'Quero Receber';
+      });
+    });
+  </script>
 </body>
 </html>
